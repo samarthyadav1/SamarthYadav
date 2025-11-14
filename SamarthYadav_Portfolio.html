@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Yadav | Business Development Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC04;
+            --google-green: #34A853;
+            --google-gray: #5F6368;
+            --light-gray: #F8F9FA;
+            --border-radius: 8px;
+            --box-shadow: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px rgba(60,64,67,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Chrome Homepage Style - Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(66, 133, 244, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 30%, rgba(234, 67, 53, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 80%, rgba(251, 188, 4, 0.1) 0%, transparent 20%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--google-gray);
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--google-gray);
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 24px;
+            padding: 12px 20px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .search-bar:hover {
+            box-shadow: 0 2px 6px rgba(60,64,67,0.3), 0 8px 16px rgba(60,64,67,0.15);
+        }
+
+        .search-bar i {
+            color: var(--google-gray);
+            margin-right: 15px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background: transparent;
+        }
+
+        .search-bar button {
+            background: var(--google-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .search-bar button:hover {
+            background: #3367d6;
+        }
+
+        .chrome-shortcuts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .shortcut {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .shortcut:hover {
+            transform: translateY(-5px);
+        }
+
+        .shortcut-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .shortcut:nth-child(1) .shortcut-icon { background-color: var(--google-blue); }
+        .shortcut:nth-child(2) .shortcut-icon { background-color: var(--google-red); }
+        .shortcut:nth-child(3) .shortcut-icon { background-color: var(--google-yellow); }
+        .shortcut:nth-child(4) .shortcut-icon { background-color: var(--google-green); }
+        .shortcut:nth-child(5) .shortcut-icon { background-color: var(--google-gray); }
+        .shortcut:nth-child(6) .shortcut-icon { background-color: var(--google-blue); }
+
+        .shortcut span {
+            font-size: 0.9rem;
+            color: var(--google-gray);
+        }
+
+        /* Gmail Theme - Experience Timeline */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--google-gray);
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .gmail-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .gmail-header {
+            background: var(--google-blue);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gmail-header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .gmail-header i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .gmail-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .gmail-action {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gmail-action:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .gmail-sidebar {
+            width: 200px;
+            background: #f6f8fc;
+            padding: 20px 0;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .gmail-layout {
+            display: flex;
+        }
+
+        .gmail-content {
+            flex: 1;
+        }
+
+        .gmail-sidebar-item {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gmail-sidebar-item:hover {
+            background: #e8eaed;
+        }
+
+        .gmail-sidebar-item.active {
+            background: #e3eef9;
+            color: var(--google-blue);
+            font-weight: 500;
+        }
+
+        .gmail-sidebar-item i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .email-thread {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .email-thread:hover {
+            background: #f5f5f5;
+        }
+
+        .email-thread:last-child {
+            border-bottom: none;
+        }
+
+        .email-checkbox {
+            margin-right: 15px;
+        }
+
+        .email-content {
+            flex: 1;
+        }
+
+        .email-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .email-sender {
+            font-weight: 500;
+            color: var(--google-gray);
+        }
+
+        .email-subject {
+            font-weight: 500;
+            color: var(--google-gray);
+            margin-bottom: 5px;
+        }
+
+        .email-date {
+            color: var(--google-gray);
+            font-size: 0.9rem;
+        }
+
+        .email-preview {
+            color: #5F6368;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .email-attachments {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .attachment {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            color: var(--google-blue);
+            font-size: 0.9rem;
+        }
+
+        .attachment i {
+            margin-right: 5px;
+        }
+
+        /* Google Photos Section - Achievements & Results */
+        .photos-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .photos-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .photos-action {
+            background: white;
+            border: none;
+            color: var(--google-gray);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .photos-action:hover {
+            background: #f1f3f4;
+        }
+
+        .photos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .photo-image {
+            height: 180px;
+            background-color: #f1f3f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--google-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+        }
+
+        .photo-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .photo-action {
+            background: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--google-gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .photo-action:hover {
+            transform: scale(1.1);
+        }
+
+        .photo-label {
+            padding: 15px;
+            font-weight: 500;
+            color: var(--google-gray);
+        }
+
+        .photo-details {
+            padding: 0 15px 15px;
+            font-size: 0.9rem;
+            color: #5F6368;
+        }
+
+        /* Google Drive Section - Projects */
+        .drive-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .drive-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .drive-action {
+            background: white;
+            border: none;
+            color: var(--google-gray);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .drive-action:hover {
+            background: #f1f3f4;
+        }
+
+        .drive-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .drive-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .drive-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .drive-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .drive-icon.folder {
+            background: var(--google-yellow);
+        }
+
+        .drive-icon.document {
+            background: var(--google-blue);
+        }
+
+        .drive-icon.spreadsheet {
+            background: var(--google-green);
+        }
+
+        .drive-icon.presentation {
+            background: var(--google-red);
+        }
+
+        .drive-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--google-gray);
+        }
+
+        .drive-details {
+            font-size: 0.8rem;
+            color: #5F6368;
+        }
+
+        /* Skills Dashboard Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .skill-category h3 {
+            color: var(--google-gray);
+            margin-bottom: 20px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--google-blue);
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--google-gray);
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #f1f3f4;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+        }
+
+        .tool-item {
+            background: #f1f3f4;
+            border-radius: var(--border-radius);
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--google-gray);
+            transition: background 0.2s;
+        }
+
+        .tool-item:hover {
+            background: #e8eaed;
+        }
+
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .education-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .education-title {
+            font-weight: 500;
+            color: var(--google-gray);
+        }
+
+        .education-details {
+            color: #5F6368;
+            margin-bottom: 10px;
+        }
+
+        .education-date {
+            color: var(--google-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Strengths Section */
+        .strengths-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .strength-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+
+        .strength-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--google-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 15px;
+        }
+
+        .strength-title {
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--google-gray);
+        }
+
+        .strength-desc {
+            color: #5F6368;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .contact-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #f1f3f4;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--google-gray);
+            font-size: 2.5rem;
+        }
+
+        .contact-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--google-gray);
+        }
+
+        .contact-title {
+            color: var(--google-blue);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+            color: var(--google-gray);
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .email-btn { background: var(--google-red); }
+        .phone-btn { background: var(--google-green); }
+        .linkedin-btn { background: var(--google-blue); }
+        .location-btn { background: var(--google-yellow); }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .chrome-shortcuts {
+                gap: 20px;
+            }
+            
+            .shortcut-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gmail-layout {
+                flex-direction: column;
+            }
+            
+            .gmail-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            .gmail-sidebar-items {
+                display: flex;
+                overflow-x: auto;
+            }
+            
+            .gmail-sidebar-item {
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Chrome Homepage Style - Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Samarth Yadav</h1>
+            <p>Business Consultant | Sales Operations | Go-to-Market (GTM) Strategist</p>
+            
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search: Who is Samarth Yadav?">
+                    <button id="search-btn">Search</button>
+                </div>
+            </div>
+            
+            <div class="chrome-shortcuts">
+                <div class="shortcut" data-target="experience">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span>Experience</span>
+                </div>
+                <div class="shortcut" data-target="projects">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <span>Projects</span>
+                </div>
+                <div class="shortcut" data-target="achievements">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <span>Achievements</span>
+                </div>
+                <div class="shortcut" data-target="skills">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <span>Skills</span>
+                </div>
+                <div class="shortcut" data-target="education">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>Education</span>
+                </div>
+                <div class="shortcut" data-target="contact">
+                    <div class="shortcut-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gmail Theme - Experience Timeline -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="gmail-container">
+                <div class="gmail-header">
+                    <div class="gmail-header-left">
+                        <i class="fas fa-envelope"></i>
+                        <span>Experience Timeline</span>
+                    </div>
+                    <div class="gmail-actions">
+                        <button class="gmail-action">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                        <button class="gmail-action">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gmail-layout">
+                    <div class="gmail-sidebar">
+                        <div class="gmail-sidebar-items">
+                            <div class="gmail-sidebar-item active">
+                                <i class="fas fa-inbox"></i>
+                                <span>Primary</span>
+                            </div>
+                            <div class="gmail-sidebar-item">
+                                <i class="fas fa-star"></i>
+                                <span>Starred</span>
+                            </div>
+                            <div class="gmail-sidebar-item">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Sent</span>
+                            </div>
+                            <div class="gmail-sidebar-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Drafts</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gmail-content">
+                        <div class="email-thread">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-content">
+                                <div class="email-header">
+                                    <div class="email-sender">TapMind Technologies Private Limited</div>
+                                    <div class="email-date">Dec 2024 – Present | Bangalore, India</div>
+                                </div>
+                                <div class="email-subject">Sales Coordinator & BD Manager</div>
+                                <div class="email-preview">
+                                    Spearheaded the development of a comprehensive Business Development ecosystem integrating lead sourcing frameworks, analytics dashboards, and automation tools to drive publisher acquisition and engagement. Designed and executed multichannel outreach strategies improving conversion rates by 23.7%.
+                                </div>
+                                <div class="email-attachments">
+                                    <div class="attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                        <span>Certificates</span>
+                                    </div>
+                                    <div class="attachment">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Dashboards</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-thread">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-content">
+                                <div class="email-header">
+                                    <div class="email-sender">AVIN Systems Private Limited</div>
+                                    <div class="email-date">Jul 2023 – Nov 2024 | Bangalore, India</div>
+                                </div>
+                                <div class="email-subject">Associate Business Development Engineer</div>
+                                <div class="email-preview">
+                                    Increased client base by 13.2% by managing 21 sales lifecycles from prospecting to contract closure. Designed financial and data models in Excel to improve forecasting accuracy and reduce proposal turnaround time by 30%.
+                                </div>
+                                <div class="email-attachments">
+                                    <div class="attachment">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>SOP Samples</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="email-thread">
+                            <div class="email-checkbox">
+                                <input type="checkbox">
+                            </div>
+                            <div class="email-content">
+                                <div class="email-header">
+                                    <div class="email-sender">Inforquest Inc</div>
+                                    <div class="email-date">Oct 2022 – Jun 2023 | Mangalore, India</div>
+                                </div>
+                                <div class="email-subject">Junior Business Consultant</div>
+                                <div class="email-preview">
+                                    Increased enterprise efficiency by 15% through comprehensive business process assessments and targeted market research. Improved client retention by 34% by supporting client relationship management.
+                                </div>
+                                <div class="email-attachments">
+                                    <div class="attachment">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <span>Case Studies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Drive Theme - Projects -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects & Case Studies</h2>
+            <div class="drive-header">
+                <h3>My Drive</h3>
+                <div class="drive-actions">
+                    <button class="drive-action">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="drive-action">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="drive-container">
+                <div class="drive-item">
+                    <div class="drive-icon folder">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="drive-name">BD Framework Design</div>
+                    <div class="drive-details">Complete business development ecosystem</div>
+                </div>
+                
+                <div class="drive-item">
+                    <div class="drive-icon document">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="drive-name">Outreach Automation</div>
+                    <div class="drive-details">Multi-channel engagement frameworks</div>
+                </div>
+                
+                <div class="drive-item">
+                    <div class="drive-icon spreadsheet">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="drive-name">Performance Metrics</div>
+                    <div class="drive-details">KPI dashboards & analytics</div>
+                </div>
+                
+                <div class="drive-item">
+                    <div class="drive-icon presentation">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="drive-name">Team Training Modules</div>
+                    <div class="drive-details">SOPs & onboarding materials</div>
+                </div>
+                
+                <div class="drive-item">
+                    <div class="drive-icon folder">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="drive-name">AIROSMART</div>
+                    <div class="drive-details">IoT-based Air Purification System</div>
+                </div>
+                
+                <div class="drive-item">
+                    <div class="drive-icon document">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="drive-name">Hunger Go</div>
+                    <div class="drive-details">Food Donation Android App</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Photos Section - Achievements & Results -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements & Results</h2>
+            <div class="photos-header">
+                <h3>Memories</h3>
+                <div class="photos-actions">
+                    <button class="photos-action">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="photos-action">
+                        <i class="fas fa-sort"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="photos-container">
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-trophy fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">Top 100 Startup Recognition</div>
+                    <div class="photo-details">Ranked among Top 100 Startups in Startup India Together 2022 Challenge (India & Canada)</div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-award fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">Government Funding</div>
+                    <div class="photo-details">Secured funding from Government of India & Karnataka through NAIN initiative (AIC-BIMTECH Incubation)</div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-medal fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">First Prize - Final Year Project</div>
+                    <div class="photo-details">Awarded First Prize for Final Year Engineering Project on IoT-based Air Purification System</div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-chart-line fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">23.7% Campaign Conversion</div>
+                    <div class="photo-details">Managed 10-member team achieving 23.7% campaign conversion rate</div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-rocket fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">30% Faster Proposals</div>
+                    <div class="photo-details">Reduced turnaround time for client proposals by 30% through data modeling</div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image">
+                        <i class="fas fa-users fa-3x"></i>
+                        <div class="photo-overlay">
+                            <div class="photo-actions">
+                                <button class="photo-action">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="photo-action">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-label">34% Client Retention</div>
+                    <div class="photo-details">Improved client retention by 34% through relationship management</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="section" id="strengths">
+        <div class="container">
+            <h2 class="section-title">Core Strengths</h2>
+            <div class="strengths-container">
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="strength-title">Strategic & Analytical</div>
+                    <div class="strength-desc">Combine data-driven insights with business strategy to identify growth opportunities and improve operational efficiency</div>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="strength-title">Leadership & Collaboration</div>
+                    <div class="strength-desc">Lead cross-functional teams, ensuring alignment between sales, marketing, and client objectives</div>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="strength-title">Process-Oriented</div>
+                    <div class="strength-desc">Build and automate scalable business development systems</div>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="strength-title">Client-Centric Approach</div>
+                    <div class="strength-desc">Foster strong stakeholder relationships to drive long-term partnerships and consistent business growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Dashboard Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Key Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Business Strategy & Transformation</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%; background-color: var(--google-blue);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Process Optimization & Change Management</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%; background-color: var(--google-red);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Market & Financial Analysis</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%; background-color: var(--google-yellow);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>CRM Management (Zoho, Salesforce)</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%; background-color: var(--google-green);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>KPI Development & Performance Measurement</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%; background-color: var(--google-blue);"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Client & Stakeholder Engagement</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%; background-color: var(--google-red);"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">Zoho CRM</div>
+                        <div class="tool-item">Zoho Voice</div>
+                        <div class="tool-item">Smartlead</div>
+                        <div class="tool-item">Zoho Campaigns</div>
+                        <div class="tool-item">Superfone</div>
+                        <div class="tool-item">Google Workspace</div>
+                        <div class="tool-item">Microsoft Office</div>
+                        <div class="tool-item">Power BI</div>
+                        <div class="tool-item">DocuSign</div>
+                        <div class="tool-item">Zoho Sign</div>
+                        <div class="tool-item">JIRA</div>
+                        <div class="tool-item">Trello</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;"><i class="fas fa-code"></i> Business Development Skills</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">Lead Generation</div>
+                        <div class="tool-item">Prospecting</div>
+                        <div class="tool-item">Multi-Channel Outreach</div>
+                        <div class="tool-item">End-to-End Sales</div>
+                        <div class="tool-item">Account Management</div>
+                        <div class="tool-item">Sales Forecasting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <div class="education-title">Bachelor of Engineering (Computer Science & Engineering)</div>
+                            <div class="education-details">Sahyadri College of Engineering (VTU)</div>
+                            <div class="education-date">2019 - 2023 | Mangalore</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div>
+                            <div class="education-title">High School Certificate</div>
+                            <div class="education-details">Disha Delphi Global Senior Secondary School</div>
+                            <div class="education-date">2018 - 2019 | Kota, Rajasthan, India</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <div class="education-title">Certification in The Fundamentals of Digital Marketing</div>
+                            <div class="education-details">Google</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <div class="education-title">AWS Technical Essentials</div>
+                            <div class="education-details">Amazon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <div class="contact-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contact-name">Samarth Yadav</div>
+                    <div class="contact-title">Business Consultant | Sales Operations | GTM Strategist</div>
+                    <div class="contact-info">
+                        <p>A business development professional with 3+ years of experience in business development and sales operations, expert in CRM management and data-driven decision-making.</p>
+                        <p style="margin-top: 15px;"><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="mailto:samarthyadav.works@gmail.com" class="contact-btn email-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919119146001" class="contact-btn phone-btn">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/samarthydv/" class="contact-btn linkedin-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="contact-btn location-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for search and shortcuts
+        document.getElementById('search-btn').addEventListener('click', function() {
+            document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Add click events to shortcuts
+        document.querySelectorAll('.shortcut').forEach(shortcut => {
+            shortcut.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Add subtle animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(section);
+        });
+
+        // Add hover effect to email threads
+        document.querySelectorAll('.email-thread').forEach(thread => {
+            thread.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#f5f5f5';
+            });
+            
+            thread.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'white';
+            });
+        });
+
+        // Gmail sidebar interaction
+        document.querySelectorAll('.gmail-sidebar-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.gmail-sidebar-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
